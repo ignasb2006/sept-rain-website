@@ -1,0 +1,37 @@
+.rules-section {
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    margin-top: 4rem;
+}
+
+.rules-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.rules-container p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.rules-container ul {
+    padding-left: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    list-style-type: none;
+}
+
+.rules-container ul li {
+    margin-bottom: 0.75rem;
+}
+
+.rules-container ul li h1{
+   text-align: left;
+}

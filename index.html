@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SeptemberRain Minecraft Server</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Store</a></li>
+      <li><a href="rules.html">Rules</a></li>
+      <li><a href="#">Dynmap</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-section">
+    <img src="images/logo.png" alt="Centered Logo" class="hero-logo" />
+    <div class="server-ip-container">
+        <p class="server-ip-label">Server IP:</p>
+        <p class="ip-address" id="ipAddress" title="Click to copy">play.septemberrain.net</p>
+        <p>(Minecraft Java 1.21.5 or above.)</p>
+    </div>
+  </div>
+
+  <section class="content-section">
+  <div class="left-text">
+    <div class="text-wrapper">
+      <h2>What is SeptemberRain?</h2>
+      <p>SeptemberRain is a GeoPolitical towny server, with heavy emphasis on roleplay. 
+        <br>You are forced to make a character
+        and you will be that character, playing as them, meeting new people, changing the course of history
+        until you meet your untimely demise. 
+        <br>Dying will remove you from the town you are in
+        (if you are the only player in a town / nation it will get wiped automatically, be warned.)
+        <br> <br>
+        That's the basic premise of it, connect using the IP at the top (any minecraft version >1.21.5 will work),
+        and have fun!
+      </p>
+    </div>
+  </div>
+  <div class="right-text">
+    <div class="text-wrapper">
+      <h2>Who are we?</h2>
+      <p>This server was created by a veteran of the geopolitical towny server genre, who had already created several
+        servers before that had hundreds of players on at once. One notable server is <b>Panzerkraft</b>, if that name rings 
+        a bell, you know who I am. The server is managed by a few veteran players of that server, and we hope we manage to
+        bring you the same amount of joy we brought to you back then.
+      </p>
+    </div>
+  </div>
+  
+</section>
+
+<footer class="footer">
+  <div class="social-links">
+    <a href="https://discord.com/invite/qXwRJFaDf2" aria-label="Discord">
+      <img src="images/discord.svg" alt="Discord" width="24" height="24" />
+      Discord
+    </a>
+    <a href="#" aria-label="Instagram">
+      <img src="images/instagram.svg" alt="Instagram" width="24" height="24" />
+      Instagram
+    </a>
+  </div>
+</footer>
+
+  <script>
+    const ipElement = document.getElementById('ipAddress');
+    const heroLogo = document.querySelector('.hero-section');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      
+      if (heroLogo) heroLogo.style.opacity = 1 - scrollY / 300;
+    });
+
+    ipElement.addEventListener('click', () => {
+    navigator.clipboard.writeText(ipElement.textContent).then(() => {
+      const originalText = ipElement.textContent;
+      ipElement.textContent = 'Copied!';
+      setTimeout(() => {
+        ipElement.textContent = originalText;
+      }, 1500);
+    }).catch(() => {
+      alert('Failed to copy IP address.');
+    });
+  });
+  </script>
+</body>
+</html>
