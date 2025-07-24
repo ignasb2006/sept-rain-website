@@ -214,12 +214,19 @@ body {
 }
 
 /* Instagram - gradient simulation with fallback solid */
-.social-links a[aria-label="Instagram"] {
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+.social-links a[aria-label="TikTok"] {
+  background-color: #1d1d1d;
 }
 
-.social-links a[aria-label="Instagram"]:hover {
-  filter: brightness(85%);
+.social-links a[aria-label="TikTok"]:hover {
+  background-color: #000000;
+}
+
+/* Icon images inside buttons */
+.social-links a img {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
 }
 
 /* Icon images inside buttons */
@@ -229,9 +236,66 @@ body {
   height: 24px;
 }
 
-/* Icon images inside buttons */
-.social-links a img {
+/* Server Status */
+
+.server-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.status-box {
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%), url('images/server.png') no-repeat center right;
+  background-size: cover;
+}
+
+.status-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.status-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+}
+
+.status-text {
+  text-align: left;
+  flex: 1;
+}
+
+
+.status-indicator {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  background-color: gray;
+  /* default */
+}
+
+.player-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url('images/person.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 0.4rem;
 }

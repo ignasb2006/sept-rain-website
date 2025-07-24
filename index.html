@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SeptemberRain Minecraft Server</title>
+  <title>SeptemberRain - Home</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
   <nav class="navbar">
@@ -24,6 +25,18 @@
         <p>(Minecraft Java 1.21.5 or above.)</p>
     </div>
   </div>
+<section class="server-status">
+  <div class="status-box">
+    <h2 class="status-title">Server Status</h2>
+    <div class="status-content">
+      <div class="status-text">
+        <p><span class="status-indicator"
+            id="status-indicator"></span> Status: <span id="server-status">Checking...</span></p>
+        <p><span class="player-icon"></span>Players Online: <span id="player-count">--</span></p>
+      </div>
+    </div>
+  </div>
+</section>
 
   <section class="content-section">
   <div class="left-text">
@@ -51,7 +64,6 @@
       </p>
     </div>
   </div>
-  
 </section>
 
 <footer class="footer">
@@ -60,34 +72,13 @@
       <img src="images/discord.svg" alt="Discord" width="24" height="24" />
       Discord
     </a>
-    <a href="#" aria-label="Instagram">
-      <img src="images/instagram.svg" alt="Instagram" width="24" height="24" />
-      Instagram
+    <a href="#" aria-label="TikTok">
+      <img src="images/tiktok.svg" alt="TikTok" width="24" height="24" />
+      TikTok
     </a>
   </div>
 </footer>
 
-  <script>
-    const ipElement = document.getElementById('ipAddress');
-    const heroLogo = document.querySelector('.hero-section');
-
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      
-      if (heroLogo) heroLogo.style.opacity = 1 - scrollY / 300;
-    });
-
-    ipElement.addEventListener('click', () => {
-    navigator.clipboard.writeText(ipElement.textContent).then(() => {
-      const originalText = ipElement.textContent;
-      ipElement.textContent = 'Copied!';
-      setTimeout(() => {
-        ipElement.textContent = originalText;
-      }, 1500);
-    }).catch(() => {
-      alert('Failed to copy IP address.');
-    });
-  });
-  </script>
+  <script src="index.js"></script>
 </body>
 </html>
