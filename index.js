@@ -7,7 +7,7 @@ const playerCountSpan = document.getElementById('player-count');
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
 
-    if (heroLogo) heroLogo.style.opacity = 1 - scrollY / 300;
+    if (heroLogo) heroLogo.style.opacity = 1 - scrollY / 600;
 });
 
 ipElement.addEventListener('click', () => {
@@ -29,7 +29,7 @@ async function loadServerData(){
         const response = await fetch(api);
         if (!response.ok){
             serverIndicatorSpan.style.backgroundColor = '#edd710ff';
-            serverStatusSpan.innerText = "JS Error.";
+            serverStatusSpan.innerText = "API Error";
             throw new Error("Server not reachable")
         };
 

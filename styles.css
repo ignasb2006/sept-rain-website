@@ -146,11 +146,20 @@ body {
   flex: 1 1 100%; /* full width */
 }
 
+.text-wrapper > h2 > img {
+  width: 5%;
+  vertical-align: middle;
+}
+
 .text-wrapper {
   width: 50%;  /* only half width inside each div */
 }
 
 .right-text > .text-wrapper {
+    float: right;
+}
+
+.right-text > .text-wrapper > iframe {
     float: right;
 }
 
